@@ -1,0 +1,20 @@
+%p.font-small
+  = link_to 'Style Guide'
+  >> Buttons
+%h1.font-xbig Style Guide: Buttons
+
+= render :partial => 'button-primary', :locals => { :href=>"", :label=>"button-primary" }
+%br 
+
+= render :partial => 'button-secondary', :locals => { :href=>"", :label=>"button-secondary" }
+%br
+
+= render :partial => 'button-tertiary-normal', :locals => { :href=>"", :label=>"button-tertiary-normal" }
+%br
+ 
+= render :partial => 'button-tertiary-small', :locals => { :href=>"", :label=>"button-tertiary-small" }
+%br
+ 
+Name: button-cancel
+= render :partial => 'button-cancel', :locals => { :href=>"", :label=>"x" }
+%br

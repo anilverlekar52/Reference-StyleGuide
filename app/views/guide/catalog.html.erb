@@ -1,0 +1,38 @@
+<p class="font-small"><%= link_to 'Style Guide' %> >> Catalog Pages</p>
+<h1 class="font-xbig">Style Guide: Catalog Pages</h1>
+
+<p>
+  <b>Usage:</b> Showing a catalog of repositories that can be search, browsed, etc.<br />
+  <b>Example:</b> <a href="http://search.ancestry.com/search/CardCatalog.aspx#ccat=hc%3D25%26dbSort%3D1%26filter%3D0*35|0*204%26">Link</a>
+</p>
+
+<div class="search2col-main">
+  <div class="matches">
+  
+    <% render :layout=>'container-search-results', :locals=>{:title=>'Matches 1-25 of 30,176'} do %>
+    <% end %>
+  
+  </div>
+  <div class="params">
+  
+    <% render :layout=>'container-search-form-simple', :locals=>{:title=>'Search Titles'} do %>
+    <% end %>
+  
+    <% render :layout=>'container-search-filters', 
+              :locals=>{ :title=>'Filter Titles',
+                         :filters=> ['All Categories','Military'],
+                         :sub_filters=> [ { :label => 'War',
+                                            :options =>
+                                            [ {:name=>'WWI',   :count=>'12,302' },
+                                              {:name=>'WWII',  :count=> '9,203' },
+                                              {:name=>'Korea', :count=>   '485' } ] },
+                                          { :label => 'Record Type',
+                                            :options =>
+                                            [ {:name=>'Draft Card',       :count=>'55,200' },
+                                              {:name=>'Discharge Letter', :count=> '1,227' } ] }
+                                        ] } do %>
+    <% end %>
+  
+  </div>
+
+</div>

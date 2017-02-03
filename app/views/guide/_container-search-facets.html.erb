@@ -1,0 +1,13 @@
+  <div class="container-search-facets">
+    <div class="title"><%= title -%></div>
+    <% for c in categories[0..-2] %>  
+      <div class="category"><font class="color-gray5">&#9656;</font> <%= c -%></div>
+    <% end %>  
+    <div class="category"><font class="color-gray5">&#9662;</font> <%= categories[-1] -%></div>
+    <% for sc in sub_categories %>  
+      <div class="subcategory">
+        <a href=""><%= sc[:name] -%></a>
+        <span class="count"><%= sc[:count] -%></span>
+      </div>
+    <% end %>
+  </div>

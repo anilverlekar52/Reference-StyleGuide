@@ -1,0 +1,54 @@
+<p class="font-small"><%= link_to 'Style Guide' %> >> Search Pages</p>
+<h1 class="font-xbig">Style Guide: Search Pages</h1>
+
+<p>
+  <b>Usage:</b> Presenting a custom form for searching a particular set of repositories<br />
+  <b>Example:</b> <a href="http://search.ancestry.com/search/category.aspx?cat=35">Link</a>
+</p>
+
+<div class="search-col-left">
+
+  <% render :layout=>'container-colored-primary', 
+            :locals=>{:title=>"container-colored-primary", 
+                      :rightlink=>{:href=>"", :label=>"Right side link"} } do %>
+    <% render :layout=>'container-colored-primary-inner' do %>
+      These are used on the search page (see <a href="search_guide.html">Search Guide</a>), in the left column.<br /><br />Green stands out somewhat more than beige/gray, so this is the container for primary content.
+    <% end %>
+  <% end %>
+
+  <% render :layout=>'container-colored-primary', 
+            :locals=>{:title=>"container-colored-primary", 
+                      :rightlink=>{:href=>"", :label=>"Right side link"} } do %>
+    <% render :layout=>'container-colored-primary-inner' do %>
+      These are used on the search page (see <a href="search_guide.html">Search Guide</a>), in the left column.<br /><br />Green stands out somewhat more than beige/gray, so this is the container for primary content.
+    <% end %>
+  <% end %>
+
+  <% render :layout=>'container-colored-primary', 
+            :locals=>{:title=>"container-colored-primary", 
+                      :rightlink=>{:href=>"", :label=>"Right side link"} } do %>
+    <% render :layout=>'container-colored-primary-inner' do %>
+      These are used on the search page (see <a href="search_guide.html">Search Guide</a>), in the left column.<br /><br />Green stands out somewhat more than beige/gray, so this is the container for primary content.
+    <% end %>
+  <% end %>
+
+</div>
+<div class="search-col-right">
+
+  <% render :layout=>'container-colored-secondary', 
+            :locals=>{:title=>"container-colored-secondary", 
+                      :rightlink=>{:href=>"", :label=>"Right side link"} } do %>
+    <% render :layout=>'container-colored-secondary-inner' do %>
+      These are used on the search page (see <a href="search_guide.html">Search Guide</a>), in the right column.<br /><br />Beige/gray is subtler than green, so this is the container for secondary content.
+    <% end %>
+  <% end %>
+
+  <% render :layout=>'container-colored-secondary', 
+            :locals=>{:title=>"container-colored-secondary", 
+                      :rightlink=>{:href=>"", :label=>"Right side link"} } do %>
+    <% render :layout=>'container-colored-secondary-inner' do %>
+      These are used on the search page (see <a href="search_guide.html">Search Guide</a>), in the right column.<br /><br />Beige/gray is subtler than green, so this is the container for secondary content.
+    <% end %>
+  <% end %>
+
+</div>

@@ -1,0 +1,14 @@
+  <div class="container-search-form-simple"> <!-- FIXME: need some more abstract parent class -->
+    <div class="title"><%= title -%></div>
+    <div class="param-list">
+      <% for p in params %>  
+        <div class="param-row">
+          <b><%= p[:key] -%>: </b><%= p[:value] -%>
+        </div>
+      <% end %>  
+    </div>
+    <div class="bottom">
+      <%= render :partial => 'button-secondary', :locals => { :href=>"", :label=>"Edit Search" } %>
+      or <a href="">Start a new search</a>
+    </div>
+  </div>

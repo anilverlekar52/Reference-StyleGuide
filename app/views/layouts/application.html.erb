@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+  <title>ReferenceStyleGuide</title>
+  <%= stylesheet_link_tag :all %>
+  <%= stylesheet_link_tag 'sass/colors' %>
+  <%= stylesheet_link_tag 'sass/global' %>
+  <%= stylesheet_link_tag 'sass/boxes' %>
+  <%= stylesheet_link_tag 'sass/fonts' %>
+  <%= stylesheet_link_tag 'sass/buttons' %>
+  <%= stylesheet_link_tag 'sass/links' %>
+  <%= stylesheet_link_tag 'sass/containers' %>
+  <%= stylesheet_link_tag 'sass/zones' %>
+  <%= stylesheet_link_tag 'sass/forms' %>
+  <%= stylesheet_link_tag 'page/color_guide.css' %>
+  <%= stylesheet_link_tag 'page/font_guide.css' %>
+  <%= stylesheet_link_tag 'page/container_guide.css' %>
+  <%= javascript_include_tag :defaults %>
+  <%= csrf_meta_tag %>
+</head>
+<body>
+<%= render :partial => 'layouts/header' %>
+
+<%= yield %>
+
+<%= render :partial => 'layouts/footer' %>
+</body>
+</html>

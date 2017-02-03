@@ -1,0 +1,105 @@
+%p.font-small
+  = link_to 'Style Guide'
+  >> Containers
+%h1.font-xbig Style Guide: Containers
+
+%div.homepage-col-left
+
+  =render :layout=>'container-neutral', :locals=>{:title=>'Name: container-neutral'} do
+    These are mostly used on the homepage (see 
+    =link_to 'Homepage Guide', "homepage_guide.html" 
+    ) as a fairly netural container.
+
+  =render :layout=>'container-neutral', :locals=>{:title=>'Name: container-neutral'} do
+    %h3.font-big.color-beige2.dotted-underline Subheading
+    Inner text.  Inner text.  Inner text.  Inner text.  Inner text.  
+    Inner text.  Inner text.  Inner text.
+    =link_to 'Link Text', ''
+    %br
+    
+    %br
+    <h3.font-big color-gray7 dotted-underline">Subheading (Alt. Color)
+    Inner text.  Inner text.  Inner text.  Inner text.  Inner text.  
+    Inner text.  Inner text.  Inner text.  <a href="">link text</a> 
+    %br
+    
+    %br
+    <h3.font-big color-green2 dotted-underline">Subheading (2nd Alt. Color)
+    Inner text.  Inner text.  Inner text.  Inner text.  Inner text.  
+    Inner text.  Inner text.  Inner text.  <a href="">link text</a> 
+    %br
+
+  =render :layout=>'container-colored-primary', 
+           :locals=>{:title=>"Name: container-colored-primary", 
+                     :rightlink=>{:href=>"", :label=>"Right side link"} } do
+    =render :layout=>'container-colored-primary-inner' do
+      These are used on the search page (see 
+      =link_to 'Search Guide', "search_guide.html"
+      ), in the left column.
+      %br
+      %br
+      Green stands out somewhat more than beige/gray, so this is the container for primary content.
+
+  =render :layout=>'container-colored-secondary', 
+            :locals=>{:title=>"Name: container-colored-secondary", 
+                      :rightlink=>{:href=>"", :label=>"Right side link"} } do
+    =render :layout=>'container-colored-secondary-inner' do
+      These are used on the search page (see 
+      =link_to "Search Guide", "search_guide.html"
+      ), in the right column.
+      %br
+      %br
+      Beige/gray is subtler than green, so this is the container for secondary content.
+
+  =render :layout=>'container-colored-secondary', 
+          :locals=>{:title=>"Name: container-colored-secondary" } do
+    %p Outer text.  Outer text.  Outer text.  Outer text.  Outer text.  Outer text.
+    =render :layout=>'container-colored-secondary-inner' do
+      Inner text.  Inner text.  Inner text.  Inner text.  Inner text.  
+      Inner text.  Inner text.  Inner text.  
+      =link_to 'link text', ''
+      %br
+
+  =render :partial=>'container-search-form-simple', :locals=>{ :title => 'Name: container-search-form-simple' }
+
+  =render :partial=>'container-search-params', :locals=>{ :title => 'Name: container-search-params', :params => [ { :key => 'Key1', :value => 'Value1' }, { :key => 'Key2', :value => 'Value2' }, { :key => 'Key3', :value => 'Value3' } ] }
+
+  =render :partial=>'container-search-facets', 
+           :locals=>{ :title=>'Name: container-search-facets',
+                      :categories=> ['Parent Category','Category'],
+                      :sub_categories=> [{:name=>'Subcategory 1', :count=>'count1' },
+                                         {:name=>'Subcategory 2', :count=>'count2' },
+                                         {:name=>'Subcategory 3', :count=>'count3' } ] }
+
+  =render :partial=>'container-search-filters', :locals=>{ :title=>'Name: container-search-filters', :filters=> ['Filter 1','Filter 2'], :sub_filters=> [ { :label => 'Subfilter1', :options => [ {:name=>'Option 1', :count=>'count1' }, {:name=>'Option 2', :count=>'count2' }, {:name=>'Option 3', :count=>'count3' } ] }, { :label => 'Subfilter2', :options => [ {:name=>'Option 1', :count=>'count1' }, {:name=>'Option 2', :count=>'count2' }, {:name=>'Option 3', :count=>'count3' } ] } ] }
+
+  =render :partial=>'container-search-results', :locals=>{:title=>'Name: container-search-results'}
+
+  =render :layout=>'container-search-result-tool', :locals=>{ :title => 'Name: container-search-result-tool' } do
+    Garbage
+    %br
+    Garbage
+    %br
+    Garbage
+    %br
+    Garbage
+    %br
+
+  =render :partial=>'container-search-result', 
+            :locals=>{ :title=>'Name: container-search-result',
+                       :search_result => [ { :key=>'Key1', :value=>'Value1' },
+                                           { :key=>'Key2', :value=>'Value2' },
+                                           { :key=>'Key3', :value=>'Value3' },
+                                           { :key=>'Key4', :value=>'Value4' },
+                                           { :key=>'Key5', :value=>'Value5' } ] }
+
+  %br
+
+  =render :layout=>'container-callout', :locals=>{  } do
+    Name: container-callout
+
+
+
+%div.homepage-col-right
+
+

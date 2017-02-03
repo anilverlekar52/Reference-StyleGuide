@@ -1,0 +1,126 @@
+%p.font-small
+  = link_to 'Style Guide'
+  >> Forms
+%h1.font-xbig Style Guide: Forms
+
+%div{:width => '500px'}
+
+  =render :layout=>'container-colored-primary', 
+          :locals=>{:title=>"Form Elements" } do
+    =render :layout=>'container-colored-primary-inner' do
+
+      %div.form_section
+        %h3 Name
+        %span.form_row
+          %span.field
+            %span.label First & Middle Name(s)
+            %span.value 
+              %input.first-middle-names
+          %span.field
+            %span.label Last Name
+            %span.value 
+              %input.last-name
+
+      =render :partial => 'button-primary', :locals => { :href=>"", :label=>"Search" }
+
+  =render :layout=>'container-colored-primary', 
+          :locals=>{:title=>"Form Elements" } do
+    =render :layout=>'container-colored-primary-inner' do
+
+      %div.form_section
+        %h3 Event
+        %span.form_row
+          %span.row_label Birth
+          %span.field
+            %span.label Day
+            %span.value 
+              %select.date-day 
+                %option 1
+          %span.field
+            %span.label Month
+            %span.value 
+              %select.date-month 
+                %option 1
+          %span.field
+            %span.label Year
+            %span.value 
+              %input.date-year
+          %span.field
+            %span.label Location
+            %span.value 
+              %input.location
+        %span.form_row
+          %span.row_label Lived In
+          %span.field
+            %span.label Location
+            %span.value 
+              %input.location
+        %span.form_row
+          %span.row_label Departure
+          %span.field
+            %span.label Year
+            %span.value 
+              %input.date-year
+          %span.field
+            %span.label Location
+            %span.value 
+              %input.location
+
+      =render :partial => 'button-primary', :locals => { :href=>"", :label=>"Search" }
+
+  =render :layout=>'container-colored-primary', 
+          :locals=>{:title=>"Form Elements" } do
+    =render :layout=>'container-colored-primary-inner' do
+
+      %div.form_section
+        %h3 Family Member
+        %span.form_row
+          %span.field
+            %span.label Relationship
+            %span.value 
+              %select.family-member-relationship 
+                %option Choose ...
+          %span.field
+            %span.label First Name
+            %span.value 
+              %input.family-member-first-name
+          %span.field
+            %span.label Last Name
+            %span.value 
+              %input.family-member-last-name
+          %span.field
+            %span.label
+            %span.value 
+              %link_to 'Remove'
+        %span.form_row
+          %span.field
+            %span.value
+              =link_to 'Add family members'
+              %font.color-beige2 (mother, father, spouse, siblings, children)
+
+      =render :partial => 'button-primary', :locals => { :href=>"", :label=>"Search" }
+
+  =render :layout=>'container-colored-primary', 
+          :locals=>{:title=>"Form Elements" } do
+    =render :layout=>'container-colored-primary-inner' do
+
+      %div.form_section
+        %h3 More
+        %span.form_row
+          %span.field
+            %span.label Keyword
+            %span.value 
+              %input.keyword
+        %span.form_row
+          %span.field
+            %span.label Gender
+            %span.value 
+              %select.gender 
+                %option -- Select --
+          %span.field
+            %span.label Race/Nationality
+            %span.value 
+              %input.race-nationality
+
+      =render :partial => 'button-primary', :locals => { :href=>"", :label=>"Search" }
+

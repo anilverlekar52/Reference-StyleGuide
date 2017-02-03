@@ -1,0 +1,11 @@
+<div class="container-colored-secondary-title">
+  <h2><%= title -%></h2>
+  <% if defined? rightlink %>
+    <p class="righttext">
+      <a href="<%= rightlink[:href] -%>"><%= rightlink[:label] -%></a>
+    </p>
+  <% end %>
+</div>
+<div class="container-colored-secondary-bottom">
+  <%= yield %>
+</div>

@@ -1,0 +1,46 @@
+<p class="font-small"><%= link_to 'Style Guide' %> >> Homepage</p>
+<h1 class="font-xbig">Style Guide: Homepage</h1>
+
+<p>
+  <b>Usage:</b> Showing homepage content: recent activiy, quick links, to do list, etc<br />
+  <b>Example:</b> <a href="http://www.ancestry.com/">Link</a>
+</p>
+
+<div class="homepage-col-left">
+
+  <% render :layout=>'container-neutral', :locals=>{:title=>'container-neutral'} do %>
+    These are mostly used on the homepage (see <a href="homepage_guide.html">Homepage Guide</a>) as a fairly netural container.
+  <% end %>
+
+  <% render :layout=>'container-neutral', :locals=>{:title=>'container-neutral'} do %>
+    <h3 class="font-big color-beige2 dotted-underline">Subheading</h3>
+    Inner text.  Inner text.  Inner text.  Inner text.  Inner text.  
+    Inner text.  Inner text.  Inner text.  <a href="">link text</a> <br />
+    <br />
+    <h3 class="font-big color-gray7 dotted-underline">Subheading (Alt. Color)</h3>
+    Inner text.  Inner text.  Inner text.  Inner text.  Inner text.  
+    Inner text.  Inner text.  Inner text.  <a href="">link text</a> <br />
+    <br />
+    <h3 class="font-big color-green2 dotted-underline">Subheading (2nd Alt. Color)</h3>
+    Inner text.  Inner text.  Inner text.  Inner text.  Inner text.  
+    Inner text.  Inner text.  Inner text.  <a href="">link text</a> <br />
+  <% end %>
+
+</div>
+<div class="homepage-col-right">
+
+  <% render :layout=>'container-neutral', :locals=>{:title=>'container-neutral'} do %>
+    <h3 class="font-big color-beige2 dotted-underline">Subheading</h3>
+    Inner text.  Inner text.  Inner text.  Inner text.  Inner text.  
+    Inner text.  Inner text.  Inner text.  <a href="">link text</a> <br />
+    <br />
+    <h3 class="font-big color-gray7 dotted-underline">Subheading (Alt. Color)</h3>
+    Inner text.  Inner text.  Inner text.  Inner text.  Inner text.  
+    Inner text.  Inner text.  Inner text.  <a href="">link text</a> <br />
+    <br />
+    <h3 class="font-big color-green2 dotted-underline">Subheading (2nd Alt. Color)</h3>
+    Inner text.  Inner text.  Inner text.  Inner text.  Inner text.  
+    Inner text.  Inner text.  Inner text.  <a href="">link text</a> <br />
+  <% end %>
+
+</div>

@@ -1,0 +1,39 @@
+%p.font-small
+  = link_to 'Style Guide'
+  >> Boxes
+%h1.font-xbig Style Guide: Boxes
+
+%h2.font-big Soft Rounding
+
+= render :layout => 'box', :locals => {:boxtype => 'rounded-soft', :bordercolor => 'gray6' } do
+  Name: box-rounded-soft
+
+= render :layout => 'box', :locals => {:boxtype => 'rounded-soft-top', :bordercolor => 'gray6' } do
+  Name: box-rounded-soft-top
+
+= render :layout => 'box', :locals => {:boxtype => 'rounded-soft-bottom', :bordercolor => 'gray6' } do
+  Name: box-rounded-soft-bottom
+
+= render :layout => 'box', :locals => {:boxtype => 'rounded-soft-left', :bordercolor => 'gray6' } do
+  Name: box-rounded-soft-left
+
+= render :layout => 'box', :locals => {:boxtype => 'rounded-soft-right', :bordercolor => 'gray6' } do
+  Name: box-rounded-soft-right
+
+%h2.font-big Hard Rounding
+
+= render :layout => 'box', :locals => {:boxtype => 'rounded-hard', :bordercolor => 'gray6' } do
+  Name: box-rounded-hard
+
+= render :layout => 'box', :locals => {:boxtype => 'rounded-hard-top', :bordercolor => 'gray6' } do
+  Name: box-rounded-hard-top
+
+= render :layout => 'box', :locals => {:boxtype => 'rounded-hard-bottom', :bordercolor => 'gray6' } do
+  Name: box-rounded-hard-bottom
+
+= render :layout => 'box', :locals => {:boxtype => 'rounded-hard-left', :bordercolor => 'gray6' } do
+  Name: box-rounded-hard-left
+
+= render :layout => 'box', :locals => {:boxtype => 'rounded-hard-right', :bordercolor => 'gray6' } do
+  Name: box-rounded-hard-right
+

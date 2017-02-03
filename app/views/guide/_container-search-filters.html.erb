@@ -1,0 +1,22 @@
+  <div class="container-search-filters">
+    <div class="title"><%= title -%></div>
+    <% for f in filters %>  
+      <div class="filter">
+        <%= f -%>
+        <span>
+          <%= render :partial => 'button-cancel', :locals => { :href=>"", :label=>"x" } %>
+        </span>
+      </div>
+    <% end %>  
+    <% for sf in sub_filters %>  
+      <div class="subfilters">
+        <b>Filter by <%= sf[:label] -%></b>
+        <% for o in sf[:options] %>  
+          <div class="subfilter">
+            <a href=""><%= o[:name] -%></a>
+            <span class="count"><%= o[:count] -%></span>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+  </div>

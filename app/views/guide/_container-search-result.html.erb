@@ -1,0 +1,37 @@
+  <div class="container-search-result">
+    <div class="title">
+      <%= title -%>
+    </div>
+    <div class="main-bg">
+      <div class="main-result">
+        <% for row in search_result %>
+          <div class="key"><%= row[:key] -%>:</div>
+          <div class="value"><%= row[:value] -%></div>
+        <% end %>
+      </div>
+      <div class="main-info">
+        <% render :layout=>'container-callout', :locals=>{  } do %>
+          <b>Save This Record</b>
+          <p>Attach this record to a person in your tree as a source record, or save for later evaluation.</p>
+          <center>
+            <%= render :partial => 'button-primary', :locals => { :href=>"", :label=>"Save" } %>
+          </center>
+        <% end %>
+
+        <div class="metadata">
+          <b>Source Citation:</b>
+          <p>Stuff about this source: publication title, date, page numbers, author names, etc.  Stuff about this source: publication title, date, page numbers, author names, etc.</p>
+        </div>
+
+        <div class="metadata">
+          <b>Source Information:</b>
+          <p>Stuff about this source: publication title, date, page numbers, author names, etc.  Stuff about this source: publication title, date, page numbers, author names, etc.</p>
+        </div>
+
+        <div class="metadata">
+          <b>Description:</b>
+          <p>Stuff about this source: publication title, date, page numbers, author names, etc.  Stuff about this source: publication title, date, page numbers, author names, etc.</p>
+        </div>
+      </div>
+    </div>
+  </div>

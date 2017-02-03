@@ -1,0 +1,13 @@
+  <div class="container-search-form-simple">
+    <div class="title"><%= title -%></div>
+    <div class="form">
+      Title<br />
+      <input><br />
+      Keyword(s)<br />
+      <input><br />
+    </div>
+    <div class="bottom">
+      <%= render :partial => 'button-primary', :locals => { :href=>"", :label=>"Search" } %>
+      or <a href="">Clear All</a>
+    </div>
+  </div>
