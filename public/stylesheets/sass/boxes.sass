@@ -1,0 +1,112 @@
+@mixin box-rounded-common
+  :padding 5px
+  :margin-bottom 10px
+
+@mixin box-rounded-hard-top-left
+  :-moz-border-top-left-radius 3px
+  :border-top-left-radius 3px
+
+@mixin box-rounded-hard-top-right
+  :-moz-border-top-right-radius 3px
+  :border-top-right-radius 3px
+
+@mixin box-rounded-hard-bottom-left
+  :-moz-border-bottom-left-radius 3px
+  :border-bottom-left-radius 3px
+
+@mixin box-rounded-hard-bottom-right
+  :-moz-border-bottom-right-radius 3px
+  :border-bottom-right-radius 3px
+
+@mixin box-rounded-soft-top-left
+  :-moz-border-top-left-radius 5px
+  :border-top-left-radius 5px
+
+@mixin box-rounded-soft-top-right
+  :-moz-border-top-right-radius 5px
+  :border-top-right-radius 5px
+
+@mixin box-rounded-soft-bottom-left
+  :-moz-border-bottom-left-radius 5px
+  :border-bottom-left-radius 5px
+
+@mixin box-rounded-soft-bottom-right
+  :-moz-border-bottom-right-radius 5px
+  :border-bottom-right-radius 5px
+
+@mixin box-rounded-soft
+  @include box-rounded-common
+  @include box-rounded-soft-top-left
+  @include box-rounded-soft-top-right
+  @include box-rounded-soft-bottom-left
+  @include box-rounded-soft-bottom-right
+
+@mixin box-rounded-soft-top
+  @include box-rounded-common
+  @include box-rounded-soft-top-left
+  @include box-rounded-soft-top-right
+
+@mixin box-rounded-soft-bottom
+  @include box-rounded-common
+  @include box-rounded-soft-bottom-left
+  @include box-rounded-soft-bottom-right
+
+@mixin box-rounded-soft-left
+  @include box-rounded-common
+  @include box-rounded-soft-top-left
+  @include box-rounded-soft-bottom-left
+
+@mixin box-rounded-soft-right
+  @include box-rounded-common
+  @include box-rounded-soft-top-right
+  @include box-rounded-soft-bottom-right
+
+
+@mixin box-rounded-hard
+  @include box-rounded-common
+  @include box-rounded-hard-top-left
+  @include box-rounded-hard-top-right
+  @include box-rounded-hard-bottom-left
+  @include box-rounded-hard-bottom-right
+
+@mixin box-rounded-hard-top
+  @include box-rounded-common
+  @include box-rounded-hard-top-left
+  @include box-rounded-hard-top-right
+
+@mixin box-rounded-hard-bottom
+  @include box-rounded-common
+  @include box-rounded-hard-bottom-left
+  @include box-rounded-hard-bottom-right
+
+@mixin box-rounded-hard-left
+  @include box-rounded-common
+  @include box-rounded-hard-top-left
+  @include box-rounded-hard-bottom-left
+
+@mixin box-rounded-hard-right
+  @include box-rounded-common
+  @include box-rounded-hard-top-right
+  @include box-rounded-hard-bottom-right
+
+.box-rounded-soft
+  @include box-rounded-soft
+.box-rounded-soft-top
+  @include box-rounded-soft-top
+.box-rounded-soft-bottom
+  @include box-rounded-soft-bottom
+.box-rounded-soft-left
+  @include box-rounded-soft-left
+.box-rounded-soft-right
+  @include box-rounded-soft-right
+
+.box-rounded-hard
+  @include box-rounded-hard
+.box-rounded-hard-top
+  @include box-rounded-hard-top
+.box-rounded-hard-bottom
+  @include box-rounded-hard-bottom
+.box-rounded-hard-left
+  @include box-rounded-hard-left
+.box-rounded-hard-right
+  @include box-rounded-hard-right

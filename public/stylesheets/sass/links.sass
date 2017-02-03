@@ -1,0 +1,19 @@
+@import colors
+
+a
+  :color $green3
+
+a:hover 
+  :color $green1
+
+@mixin link-on-bg-dark-normal
+  :color $white1
+
+@mixin link-on-bg-dark-hover
+  :color $white1
+
+a.bg-dark
+  @include link-on-bg-dark-normal
+
+a.bg-dark:hover 
+  @include link-on-bg-dark-hover

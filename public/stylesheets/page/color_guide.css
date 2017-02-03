@@ -1,0 +1,26 @@
+div.swatches {  
+  padding: 0px 0px 0px 0px;
+  margin: 0px 0px 0px 0px;
+}  
+
+div.swatches div {  
+  display: inline;
+  float: left;
+
+  height: 110px;
+  width: 110px;
+
+  border: solid 1px black;
+
+  padding: 2px;
+  margin: 2px 5px 2px 0px;
+}
+
+div.swatches div p {  
+  margin: 0;
+  padding: 0 0 4px 0;
+}
+
+div.swatches br {  
+  clear: both;
+}

@@ -1,0 +1,295 @@
+@import colors 
+@import fonts
+@import links
+@import boxes
+
+/*
+ * Menubar container in the header
+ */
+header div.menubar
+  @include box-rounded-soft
+  :border $beige1 solid 1px
+  @include gradient($offwhite1,$beige00)
+  :padding 0px
+  a
+    :display inline-block
+    :text-decoration none
+    :border-right $beige1 solid 1px
+    :height 20px
+    :padding-top 5px
+    :padding-bottom 5px
+    span
+      :padding 10px
+
+/* 
+ * Neutral Widget (the kind on the homepage)
+ */ 
+
+div.container-neutral
+  @include box-rounded-soft
+  :background $offwhite1
+  :border $gray4 1px solid
+  :margin 0px
+  :margin-bottom 10px
+  h2
+    @include font-xbig
+    :display inline
+    :color $gray6
+  div.inner
+    @include box-rounded-soft-bottom
+    :border $gray2 1px solid
+    :background-color $white1
+    :color $black1
+    :margin-top 5px
+    h3
+      :font-weight normal
+      :padding 0px
+      :margin 0px 0px 5px 0px
+
+/* 
+ * Widget 2 - has a gradient title bar and smaller title text
+ */ 
+
+@mixin container-colored-title
+  :height 16px
+  @include box-rounded-soft-top 
+  :margin-bottom 0 /* override rounded-box default */
+  h2
+    @include font-xbig2
+    :display inline
+    :float left
+    :margin 0px 6px 0px 6px
+    :color $white1
+  p.righttext
+    :display inline
+    :float right
+    :margin 0px 6px 0px 6px
+    a
+      @include link-on-bg-dark-normal
+    a:hover
+      @include link-on-bg-dark-hover
+
+div.container-colored-primary-title
+  @include container-colored-title
+  @include gradient($green1,$green2)
+
+div.container-colored-secondary-title
+  @include container-colored-title
+  @include gradient($beige1,$beige2)
+
+@mixin container-colored-bottom
+  :padding 5px
+  :margin-bottom 10px
+  p
+    :margin 0px
+    :padding 10px 0px 15px 0px
+  div /* inner */
+    :padding 5px
+
+div.container-colored-primary-bottom
+  @include container-colored-bottom
+  :border $green2 1px solid
+  @include gradient($white1,$gray1)
+
+div.container-colored-secondary-bottom
+  @include container-colored-bottom
+  :border $beige2 1px solid
+  @include gradient($white1,$gray1)
+
+div.container-colored-primary-inner
+  :background-color $white1
+  :border $green1 1px solid
+  :color $gray7
+
+div.container-colored-secondary-inner
+  :background-color $white1
+  :border $beige1 1px solid
+  :color $gray7
+
+/* 
+ * Search results container
+ */ 
+@mixin container-search-advanced-common
+  :border $beige1 1px solid
+  :margin-top 10px
+  div
+    :padding 6px
+  div.title
+    @include font-big
+    :color $gray6
+    :padding 5px
+
+@mixin container-search-advanced-params-common
+  @include container-search-advanced-common
+  div.title
+    @include gradient($beige000,$offwhite2)
+
+div.container-search-form-simple
+  @include container-search-advanced-params-common
+  div.param-list
+    :padding 0
+    :border 0
+    div.param-row
+      :padding 2px 2px 2px 5px
+      :margin 0
+      :border-top $beige0 1px solid
+      b
+        @include font-xbig2
+    div.param-row:first-child
+      :border-top none
+  div.bottom
+    :border-top $beige0 1px solid
+    :text-align center
+    @include gradient($white1,$gray1)
+    @include font-small
+
+div.container-search-facets, div.container-search-filters
+  @include container-search-advanced-params-common
+  div.category, div.filter
+    @include gradient($offwhite1,$beige00)
+    @include font-xbig2
+    :font-weight bold
+    span /* for the right-justified 'x' button */
+      :float right
+  div.subcategory
+    :border-top $beige0 1px solid
+    span.count
+      :float right
+      :color $beige2
+  div.subfilters
+    :padding 8px 
+    b
+      @include font-small
+      :font-weight bold
+      :text-transform uppercase
+    div.subfilter
+      :border-top $beige0 1px solid
+      :padding 2px 0px 2px 0px
+      span.count
+        :float right
+        :color $beige2
+  
+div.container-search-results
+  @include container-search-advanced-common
+  div.title
+    @include gradient($green0, $green1)
+    span.matches
+      @include font-big
+      :display inline-block
+      :width 300px
+    span.sort-by
+      @include font-normal
+    span.pagination
+      :margin-top 1px
+      :float right
+      @include font-normal
+      span
+        :padding 0px 3px 0px 3px
+        :border $beige2 1px solid
+        :color $black1
+      a
+        :display inline-block
+        :text-decoration none
+        :background-color $green0
+      a:hover
+        :background-color $green00
+  div.main-bg 
+    :background-color $green00
+    :padding 5px
+    div.table-header
+      :padding 5px
+      :border-bottom $beige0 1px solid
+      :background-color $beige00
+      :color $gray5
+    div.table-result
+      :padding 5px
+      :border-bottom $gray1 1px solid
+      :background-color $white1
+  div.summary
+    :padding 5px
+    :text-align center
+    @include font-small
+    :color $gray6
+    @include gradient($offwhite1, $beige00)
+
+@mixin container-search-simple-common
+  :border $beige1 1px solid
+  :margin-top 10px
+  div
+    :padding 6px
+  div.title
+    @include font-xbig2
+    :padding 3px 5px 3px 5px
+    :border-bottom $beige1 1px solid
+
+div.container-search-result-tool
+  @include container-search-simple-common
+  div.title
+    :color $beige2
+    @include gradient($offwhite1, $gray1)
+ 
+div.container-search-result
+  @include container-search-simple-common
+  div.title
+    :color $white1
+    @include gradient($green1, $green2)
+  div.main-bg 
+    :background-color $green00
+    :padding 5px
+    div.main-result
+      @include gradient($beige00, $white1)
+      :padding 0
+      div.key, div.value
+        :display inline-block
+        :margin 0 -2px 0 -2px
+        :border-width 0px 1px 1px 0px
+        :border-color $offwhite2
+        :border-style none solid solid none
+        :padding 3px 8px 3px 8px
+      div.key
+        :width 30%
+        :background-color $gray1
+        :text-align right
+        :color $gray5
+      div.value
+        :width 45%
+        :background-color $white1
+    div.main-info
+      :background-color $white1
+      div.metadata
+        b
+          @include font-xbig2
+          :color $gray5
+        p
+          :margin 0
+          :color $gray6
+
+
+div.callout 
+  @include box-rounded-soft
+  :position relative
+  :margin 12px 40px 5px 40px
+  :width auto
+  :border 1px solid $beige1
+  :background-color $beige00
+  span.notch-bg, span.notch-border
+    :position absolute
+    :left 20px
+    :width 0
+    :height 0
+    :border 10px solid transparent
+    :border-top 0
+    :margin 0
+    :padding 0
+  span.notch-bg
+    :top -10px
+    :border-bottom-color $beige00
+  span.notch-border
+    :top -11px
+    :border-bottom-color $beige1
+  b
+    @include font-xbig2
+    :color $beige2
+  p
+    :margin 0
+

@@ -1,0 +1,70 @@
+@import colors
+@import boxes
+@import fonts
+
+a.button-primary
+  :display inline-block
+  :text-decoration none
+  :text-align center
+  @include gradient($orange1, $orange3)
+  :border $green2 solid 1px
+  @include box-rounded-hard
+  span
+    color: $white1
+
+a.button-primary:hover
+  @include gradient($orange1, $orange2)
+
+a.button-primary span
+  :font-weight bold
+
+a.button-secondary
+  :display inline-block
+  :text-decoration none
+  :text-align center
+  @include gradient($green0, $green1)
+  :border $green2 solid 1px
+  @include box-rounded-hard
+  :padding-top 1px
+  :padding-bottom 1px
+  span
+    @include font-small
+    :font-weight bold
+    color: $white1
+
+a.button-secondary:hover
+  @include gradient($green00, $green1)
+
+@mixin button-tertiary
+  :display inline-block
+  :text-decoration none
+  :text-align center
+  :padding 4px 10px 6px 10px
+  :border $beige1 solid 1px
+  @include box-rounded-hard
+  @include gradient($white1,$gray1)
+
+a.button-tertiary-normal
+  @include button-tertiary
+  span
+    @include font-normal
+
+a.button-tertiary-small
+  @include button-tertiary
+  span
+    @include font-small
+
+a.button-cancel
+  @include font-small
+  :text-decoration none
+  :text-align center
+  :font-family monospace
+  :display block
+  :width 14px
+  :height 14px
+  :line-height 14px
+  :-moz-border-radius 8px
+  :border-radius 8px
+  :border $beige1 solid 1px
+  :background $gray1
+

@@ -1,0 +1,59 @@
+@import colors
+@import fonts
+
+div.form_section
+  :margin-bottom 15px
+  h3
+    @include font-big
+    :margin 0px
+  span.form_row
+    :display block
+    :margin-bottom 4px
+    span.row_label
+      :display inline-block
+      :width 60px
+    span.field
+      :display inline-block
+      span.label
+        @include font-small
+        :color $gray5
+        :display block
+      span.value
+        select
+
+select.date-day
+  :width 50px
+
+select.date-month
+  :width 50px
+
+input.date-year
+  :width 40px
+
+input.location
+  :width 138px
+
+input.keyword
+  :width 360px
+
+select.gender
+  :width 132px
+
+input.race-nationality
+  :width 225px
+
+input.first-middle-names
+  :width 175px
+
+input.last-name
+  :width 175px
+
+select.family-member-relationship
+  :width 100px
+
+input.family-member-first-name
+  :width 100px
+
+input.family-member-last-name
+  :width 100px
+

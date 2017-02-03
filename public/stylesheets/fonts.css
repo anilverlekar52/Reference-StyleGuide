@@ -1,0 +1,24 @@
+.font-xbig {
+  font: bold 20px "Trebuchet MS", sans-serif;
+  text-decoration: none; }
+
+.font-xbig2 {
+  font-family: Tahoma, Geneva, sans-serif;
+  font-size: 12px;
+  font-weight: bold; }
+
+.font-big {
+  font: bold 14px/1.2 "Trebuchet MS";
+  line-height: 21px; }
+
+body {
+  font: 13px Tahoma, Geneva, sans-serif; }
+
+.font-normal {
+  font: 13px Tahoma, Geneva, sans-serif; }
+
+.font-small {
+  font: 10px Tahoma, Geneva, sans-serif; }
+
+.dotted-underline {
+  border-bottom: #bbb0a3 dotted 1px; }

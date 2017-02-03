@@ -1,0 +1,127 @@
+@import colors
+@import boxes
+
+header, footer, artcile
+  :display block
+
+header, footer
+  :margin 0px auto 0px auto
+  :position relative
+
+header
+  :padding-top 20px
+
+footer
+  :clear both
+  :padding-top 10px
+  :padding-bottom 20px
+
+/* breadcrumbs */
+header p 
+  :padding 0
+  :margin 0
+
+/* page title */
+header h1
+  :padding 0
+  :margin 5px 0px 5px 0px
+
+div.homepage-col-left
+  :width 580px
+  :float left
+
+div.homepage-col-right
+  :width 365px
+  :float right
+
+div.search-col-left
+  @include box-rounded-soft
+  :width 540px
+  :float left
+  :padding-top 15px
+  :border $beige1 solid 1px
+
+div.search-col-right
+  @include box-rounded-soft-right
+  :width 395px
+  :float right
+  :margin-top 10px
+  :margin-bottom 10px
+  :border $beige1 solid 1px
+  :border-left $gray3 2px solid /* override the left side, to put a drop-shadow there */
+
+div.search2col-main
+  div.params
+    :-moz-border-bottom-colors none
+    :-moz-border-image none
+    :-moz-border-left-colors none
+    :-moz-border-right-colors none
+    :-moz-border-top-colors none
+    :background none repeat scroll 0 0 $white1
+    :border-color $beige1 -moz-use-text-color $beige1 $beige1
+    :border-style solid none solid solid
+    :border-width 1px 0 1px 1px
+    :float right 
+    :width 226px
+    :position relative
+    :z-index 1
+    :padding 0px 0px 6px 6px
+    :margin 0 0 20px
+  div.matches
+    :width 713px
+    :float right
+    :z-index 0
+    :padding 6px
+    :padding-top 0px
+    :border $beige1 1px solid
+    :margin 0 0 0 -1px
+    :background none repeat scroll 0 0 $white1
+    :position relative
+
+div.search3col-main
+  div.matches-and-params
+    :float left
+    div.params
+      :-moz-border-bottom-colors none
+      :-moz-border-image none
+      :-moz-border-left-colors none
+      :-moz-border-right-colors none
+      :-moz-border-top-colors none
+      :-moz-use-text-color $beige1 $beige1
+      :background none repeat scroll 0 0 $white1
+      :border-color $beige1
+      :border-style solid none solid solid
+      :border-width 1px 0 1px 1px
+      :float right 
+      :width 226px
+      :position relative
+      :z-index 1
+      :padding 0px 0px 6px 6px
+      :margin 0 0 20px
+    div.matches
+      :width 538px
+      :float right
+      :z-index 0
+      :padding 6px
+      :padding-top 0px
+      :border $beige1 1px solid
+      :margin 0 -1px 0 -1px
+      :background none repeat scroll 0 0 $white1
+      :position relative
+  div.suggestions
+    :-moz-border-image none
+    :-moz-border-bottom-colors none
+    :-moz-border-left-colors none
+    :-moz-border-right-colors none
+    :-moz-border-top-colors none
+    :-moz-use-text-color $beige1 $beige1
+    :background none repeat scroll 0 0 $white1
+    :border-color $beige1
+    :border-style solid solid solid none
+    :border-width 1px 1px 1px 0
+    :float left
+    :width 169px
+    :position relative
+    :z-index 2
+    :padding 0px 6px 6px 0px
+
